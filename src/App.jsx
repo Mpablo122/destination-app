@@ -1,6 +1,7 @@
 //Task 1 - "Setup root component with state and props structure"
 import React, { useState } from 'react';
 import Gallery from './components/Gallery';
+import DestinationSelector from './components/DestinationSelector';
 import './styles/styles.css';
 function App() {
   const [tours, setTours] = useState([]);
