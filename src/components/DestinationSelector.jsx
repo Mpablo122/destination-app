@@ -16,7 +16,7 @@ const DestinationSelector = ({ tours, onDestinationChange }) => {
 
     return (
         <div>
-            <label htmlFor="destination-select">Choose a destination:</label>
+            <label htmlFor="destination-select">Choose your destination:</label>
             <select
                 id="destination-select"
                 value={selectedDestination}
