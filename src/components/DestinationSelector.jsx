@@ -7,7 +7,7 @@ const DestinationSelector = ({ tours, onDestinationChange }) => {
     // Initialize state to manage the selected destination
     const [selectedDestination, setSelectedDestination] = useState('All Destinations');
 
-    // Function to handle changes in the dropdown selection
+    // This function is called when the user selects a destination from the dropdown
     const handleChange = (event) => {
         const destination = event.target.value;
         setSelectedDestination(destination);
