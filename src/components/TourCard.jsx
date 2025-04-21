@@ -1,4 +1,4 @@
-//"Render the tour cards"
+//"task 3 - Render the tour cards"
 
 import React, {useState} from "react";
 

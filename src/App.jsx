@@ -1,3 +1,4 @@
+//Task 4: Reset View
 import React, { useState } from "react";
 import Gallery from "./components/Gallery";
 import DestinationSelector from "./components/DestinationSelector";
