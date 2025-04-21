@@ -2,7 +2,7 @@
 
 import React, {useState} from "react";
 
-const TourCard = ({id, name, info, price, image}) => {
+const TourCard = ({id, name, info, price, image, onRemove}) => {
     const [readMore, setReadMore] = useState(false);
 
     return (
@@ -14,6 +14,8 @@ const TourCard = ({id, name, info, price, image}) => {
                 <button onClick={() => setReadMore(!readMore)}>
                     {readMore ? "show less" : "read more"}
                 </button>
+                <button className="delete-btn" onClick={() => onRemove(id)}>not interested</button>
+
             </p>
             <div className="tour-info">
                 <h4>${price}</h4>

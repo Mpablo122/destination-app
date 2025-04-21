@@ -4,7 +4,7 @@ import React, { use, useEffect, useState } from 'react';
 import TourCard from './TourCard';
 
 
-const Gallery = ({ tours, setTours, onRemove }) => {
+const Gallery = ({ tours, setTours,setFilteredTours, onRemove }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -25,6 +25,7 @@ const fetchTours = async () => {
       }));
 
       setTours(trimmed);
+      setFilteredTours(trimmed); 
       setLoading(false);
     } catch (error) {
       setError(true);
