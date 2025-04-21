@@ -1,3 +1,4 @@
+//Task 1 creating the setup for the gallery
 //Task 4: Reset View
 import React, { useState } from "react";
 import Gallery from "./components/Gallery";
