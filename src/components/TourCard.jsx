@@ -1,4 +1,4 @@
-//"Build TourCard with conditional rendering and interaction"
+//"Render the tour cards"
 
 import React, {useState} from "react";
 

@@ -7,14 +7,14 @@ function App() {
   const [tours, setTours] = useState([]);
   const [filteredTours, setFilteredTours] = useState([]);
 
-  // Remove tour by ID
+  // Remove tours by their ids
   const onRemove = (id) => {
     const updatedTours = tours.filter((tour) => tour.id !== id);
     setTours(updatedTours);
     setFilteredTours(updatedTours);
   };
 
-  // Handle destination change from dropdown
+  // this is for the destination drop down change 
   const onDestinationChange = (destination) => {
     if (destination === "All Destinations") {
       setFilteredTours(tours);
@@ -28,14 +28,14 @@ function App() {
     <main>
       <h1>Tour List</h1>
       
-      {/* Dropdown for filtering */}
+      {/* This dropdown is needed for filtering */}
       <DestinationSelector tours={tours} onDestinationChange={onDestinationChange} />
 
-      {/* Gallery receives both full and filtered tours */}
+      {/* Gallery has all of the tours filtered */}
       <Gallery
         tours={filteredTours.length ? filteredTours : tours}
         setTours={setTours}
-        setFilteredTours={setFilteredTours} // ✅ Added this
+        setFilteredTours={setFilteredTours} // simply so that the tours are filtered
         onRemove={onRemove}
       />
     </main>

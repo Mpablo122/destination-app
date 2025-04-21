@@ -1,4 +1,4 @@
-//Task 2 - "Fetch and render tour list with useEffect and state"
+//Task 2 - "Create the dropdown filter for the tour names"
 
 import React, { use, useEffect, useState } from 'react';
 import TourCard from './TourCard';
@@ -8,14 +8,14 @@ const Gallery = ({ tours, setTours,setFilteredTours, onRemove }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-//fetching gallery from the API
+
 
 const fetchTours = async () => {
     try {
       const res = await fetch("https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project");
       const data = await res.json();
 
-      // You don't need `.results` for this API, just `data`
+      
       const trimmed = data.map((tour) => ({
         id: tour.id,
         name: tour.name,
@@ -33,7 +33,7 @@ const fetchTours = async () => {
   }
 }
 
-// useEffect for fetching data on component mount
+
  useEffect(() => {
     fetchTours();
   }, []);
